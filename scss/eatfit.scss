@@ -1,0 +1,221 @@
+@import '_param';
+html {
+    font-size: 10px;
+}
+
+*,
+body {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.header {
+    &__style {
+        height: 210px;
+        background-image: url('../img/header/top-element.png');
+        background-repeat: no-repeat;
+        background-position: 110px top;
+        position: relative;
+    }
+    &__top {
+        width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 0;
+    }
+    &__minus {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: $font_main;
+        color: $color_black;
+        font-size: 20rem;
+        font-weight: 300;
+        line-height: 0.1;
+    }
+    &__plus-minus {
+        text-decoration: none;
+        color: $color_black;
+    }
+    &__center {
+        width: 485px;
+        height: 147px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    &__element-left {
+        background-image: url('../img/header/header-dots.png');
+        background-repeat: no-repeat;
+        width: 147px;
+        height: 147px;
+        background-position: top left;
+    }
+    &__logo {
+        padding: 31px 57px 0px 50px;
+    }
+    &__element-right {
+        width: 108px;
+        height: 147px;
+        padding-top: 54px;
+        background-image: url('../img/header/header-elements.png');
+        background-position: right center;
+        background-repeat: no-repeat;
+    }
+    &__plus {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-family: $font_main;
+        font-weight: 300;
+        color: $color_black;
+        font-size: 16rem;
+        line-height: 0.1;
+    }
+}
+
+.nav {
+    &__style {
+        display: flex;
+        padding: 26px 0 16px 0;
+        margin: 0 auto;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+    }
+    &__item {
+        font-family: $font_main;
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 0.14px;
+        line-height: normal;
+        display: block;
+        text-decoration: none;
+        color: $color_black_a;
+        cursor: pointer;
+        &:hover {
+            font-weight: 700;
+        }
+    }
+    &__line {
+        font-size: 1.4rem;
+        padding: 0px 37px;
+        font-family: $font_main;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+.main {
+    &__style {}
+}
+
+.slider {
+    height: 560px;
+    margin: 0 auto;
+    background-image: url('../img/main/slider/01.jpg');
+    background-position: center center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__title {
+        font-family: $font_main;
+        font-size: 6rem;
+        font-weight: 300;
+        color: $color_white;
+    }
+}
+
+.programm {
+    padding-top: 60px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        color: $color_black_d;
+        font-family: $font_main;
+        font-size: 6rem;
+        font-weight: 300;
+        padding-bottom: 46px;
+    }
+    &__block {
+        width: 950px;
+        background-color: $color_bg_block;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 27px 35px 30px 35px;
+    }
+    // .programm__type
+    &__type {}
+    // .programm__name
+    &__name {}
+    // .programm__weeks
+    &__weeks {}
+    // .programm__delivery
+    &__delivery {}
+    // .programm__text
+    &__text {}
+}
+
+.type {
+    // .type__items
+    &__items {}
+    // .type__item
+    &__item {}
+    // .type__name
+    &__name {
+        // .type__name_bold
+        &_bold {}
+    }
+    // .type__kcal
+    &__kcal {}
+    // .type__price
+    &__price {}
+    // .type__line
+    &__line {}
+}
+
+.selected {}
+
+.week {
+    // .week__items
+    &__items {}
+    // .week__item
+    &__item {}
+    // .week__numb
+    &__numb {}
+    // .week__percent
+    &__percent {}
+}
+
+.delivery {
+    // .delivery__items
+    &__items {}
+    // .delivery__item
+    &__item {}
+    // .delivery__day
+    &__day {}
+    // .delivery__times
+    &__times {}
+    // .delivery__time
+    &__time {
+        // .delivery__time_bold
+        &_bold {}
+    }
+}
