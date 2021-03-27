@@ -33,9 +33,11 @@
     <div class="wrapper">
         <header class="header-style container">
             <div class="header-top">
-                <div class="header-minus">
-                    <p class="nav-burger"></p>
-                    <a class="header-plus-minus" href="#">-</a>
+                <div class="header-left">
+                    <div class="header__burger">
+                        <p class="nav-burger"></p>
+                    </div>
+                    <p class="header-minus"></p>
                 </div>
                 <div class="header-center">
                     <div class="header-element-left"></div>
@@ -44,9 +46,11 @@
                     </div>
                     <div class="header-element-right"></div>
                 </div>
-                <div class="header-plus">
-                    <p class="header-lang">Eng</p>
-                    <a class="header-plus-minus" href="#">+</a>
+                <div class="header-right">
+                    <p class="header-lang" id="lang">Eng</p>
+                    <a href="#">
+                        <p class="header-plus"></p>
+                    </a>
                 </div>
             </div>
             <nav class="nav__style">
@@ -71,26 +75,26 @@
             </section>
             <section class="programm container" aria-label="programm">
                 <h2 class="programm__title">Valitse ohjelma</h2>
-                <div class="programm__block" id="colorblock">
+                <div class="programm__block programm__block_color-0" id="colorblock">
                     <div class="programm__type">
                         <p class="programm__name">Tavoitteesi</p>
                         <div class="type__items">
                             <div class="type__item">
-                                <p class="type__name">Painopudotus</p>
+                                <p class="type__name type__name_one">Painopudotus</p>
                                 <p class="type__kcal">1500 kcal</p>
                                 <p class="type__price">30 € (pv)</p>
                             </div>
                             <div class="type__name type__line">/</div>
                             <div class="type__item">
-                                <p class="type__name">Balance</p>
+                                <p class="type__name type__name_two">Balance</p>
                                 <p class="type__kcal selected">2000 kcal</p>
                                 <p class="type__price">50 € (pv)</p>
                             </div>
                             <div class="type__name type__line">/</div>
                             <div class="type__item">
-                                <p class="type__name">Lihasmassan kasvatus</p>
+                                <p class="type__name type__name_three">Lihasmassan kasvatus</p>
                                 <p class="type__kcal">2500 kcal</p>
-                                <p class="type__price">50 € (pv)</p>
+                                <p class="type__price">70 € (pv)</p>
                             </div>
                         </div>
                     </div>
@@ -113,46 +117,60 @@
                                 <p class="week__numb selected">4 Viikkoa</p>
                                 <p class="week__percent">-10%</p>
                             </div>
+                            <div class="week__prolong">
+                                <input type="checkbox" name="prolog" id="prolog" checked>
+                                <label class="week__label" for="prolog">Tilauksen automaattinen
+                                    uusiminen</label>
+                            </div>
                         </div>
                     </div>
                     <div class="programm__delivery">
                         <p class="programm__name">Toimitus (2 päivänä)</p>
                         <div class="delivery__items">
                             <div class="delivery__item">
-                                <div class="delivery__day">Maanantai</div>
+                                <div class="delivery__day delivery__day-cut">Ma</div>
+                                <div class="delivery__day delivery__day-full">Maanantai</div>
                                 <div class="delivery__times">
                                     <p class="delivery__time">8.00</p>
                                     <p class="delivery__time">18.00</p>
                                 </div>
                             </div>
                             <div class="delivery__item">
-                                <div class="delivery__day">Tiistai</div>
+                                <div class="delivery__day delivery__day-cut delivery__day-sel">Ti</div>
+                                <div class="delivery__day delivery__day-full delivery__day-sel">Tiistai</div>
                                 <div class="delivery__times">
                                     <p class="delivery__time">8.00</p>
                                     <p class="delivery__time">18.00</p>
                                 </div>
                             </div>
                             <div class="delivery__item">
-                                <div class="delivery__day">Keskiviikko</div>
+                                <div class="delivery__day delivery__day-cut">Ke</div>
+                                <div class="delivery__day delivery__day-full">Keskiviikko</div>
                                 <div class="delivery__times">
                                     <p class="delivery__time">8.00</p>
                                     <p class="delivery__time">18.00</p>
                                 </div>
                             </div>
                             <div class="delivery__item">
-                                <div class="delivery__day">Torstai</div>
+                                <div class="delivery__day delivery__day-cut delivery__day-sel">To</div>
+                                <div class="delivery__day delivery__day-full delivery__day-sel">Torstai</div>
                                 <div class="delivery__times">
                                     <p class="delivery__time">8.00</p>
                                     <p class="delivery__time">18.00</p>
                                 </div>
                             </div>
                             <div class="delivery__item">
-                                <div class="delivery__day">Keskiviikko</div>
+                                <div class="delivery__day delivery__day-cut">Pe</div>
+                                <div class="delivery__day delivery__day-full">Perjantai</div>
                                 <div class="delivery__times">
                                     <p class="delivery__time">8.00</p>
                                     <p class="delivery__time">18.00</p>
                                 </div>
                             </div>
+                        </div>
+                        <div class="delivery__mob-time">
+                            <p class="delivery__one-time">8.00</p>
+                            <p class="delivery__one-time">18.00</p>
                         </div>
                     </div>
                     <p class="programm__text">Tämä ohjelma sopii kaikille, jotka haluavat ylläpitää saavutettua tavoitepainoa terveellisesti. Helppoa painonhallintaa mausta tinkimättä!</p>
@@ -302,13 +320,16 @@
                 </p>
                 <div class="instagram__items">
                     <div class="feedback__arrow">&lt;</div>
-                    <div class="instagram__item">
+                    <div class="instagram__item instagram__item-one">
                         <img src="img/main/instagram/insta-01.png" alt="">
                     </div>
-                    <div class="instagram__item">
+                    <div class="instagram__item instagram__item-none">
+                        <img src="img/main/instagram/insta-01.png" alt="">
+                    </div>
+                    <div class="instagram__item instagram__item-none">
                         <img src="img/main/instagram/insta-02.png" alt="">
                     </div>
-                    <div class="instagram__item">
+                    <div class="instagram__item instagram__item-none">
                         <img src="img/main/instagram/insta-03.png" alt="">
                     </div>
                     <div class="feedback__arrow">&gt;</div>

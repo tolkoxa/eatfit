@@ -19,44 +19,91 @@ body {
 .header-style {
   width: 100%;
   height: 104px;
-  border: 1px solid;
   position: relative; }
 .header-top {
+  width: 100%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   position: relative;
   z-index: 0; }
+.header-left {
+  padding: 15px 0 0 30px;
+  width: 33px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+.header__burger {
+  width: 33px;
+  height: 21px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 .header-minus {
-  padding: 15px 0 0 20px;
-  font-family: "Fira Sans", sans-serif;
-  color: #000000;
-  font-weight: 300;
-  line-height: 0.1; }
+  width: 33px;
+  height: 6px;
+  background-color: #000000;
+  cursor: pointer; }
 .header-plus-minus {
   text-decoration: none;
   color: #000000; }
 .header-center {
-  width: 485px;
-  height: 147px;
+  width: 100px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: flex-start; }
 .header-element-left {
   display: none; }
 .header-img {
-  padding: 31px 57px 0px 50px; }
-.header-logo {
   width: 100px;
-  height: 100px; }
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+.header-logo {
+  width: 82px;
+  height: 82px; }
 .header-element-right {
   display: none; }
-.header-plus {
+.header-lang {
   font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
-  color: #000000;
-  font-size: 16rem;
-  line-height: 0.1; }
+  font-weight: 400;
+  color: #479346;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer; }
+.header-right {
+  padding: 15px 40px 0 0;
+  width: 33px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between; }
+.header-plus {
+  width: 33px;
+  height: 6px;
+  background-color: #000000;
+  cursor: pointer;
+  position: relative; }
+  .header-plus::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 33px;
+    height: 6px;
+    background-color: #000000;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg); }
 
 .nav-burger {
   width: 33px;
@@ -67,7 +114,7 @@ body {
   .nav-burger::before {
     content: '';
     position: absolute;
-    top: 9px;
+    top: -9px;
     left: 0px;
     width: 33px;
     height: 1px;
@@ -75,7 +122,7 @@ body {
   .nav-burger::after {
     content: '';
     position: absolute;
-    top: 18px;
+    top: 9px;
     left: 0px;
     width: 33px;
     height: 1px;
@@ -108,7 +155,7 @@ body {
 
 .slider {
   width: 100%;
-  height: 560px;
+  height: 175px;
   margin: 0 auto;
   background-position: center center;
   background-size: cover;
@@ -117,21 +164,22 @@ body {
   align-items: center; }
   .slider__title {
     font-family: "Fira Sans", sans-serif;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 300;
-    color: #ffffff; }
+    color: #ffffff;
+    text-align: center; }
 
 .slider-0 {
-  background-image: url("../img/main/slider/0.jpg"); }
+  background-image: url("../img/main/slider/mobile/0.jpg"); }
 
 .slider-1 {
-  background-image: url("../img/main/slider/1.jpg"); }
+  background-image: url("../img/main/slider/mobile/1.jpg"); }
 
 .slider-2 {
-  background-image: url("../img/main/slider/2.jpg"); }
+  background-image: url("../img/main/slider/mobile/2.jpg"); }
 
 .programm {
-  padding-top: 60px;
+  padding-top: 35px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -139,66 +187,93 @@ body {
   .programm__title {
     color: #1d1d1b;
     font-family: "Fira Sans", sans-serif;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 300;
-    padding-bottom: 46px; }
+    padding-bottom: 20px; }
   .programm__block {
-    width: 950px;
-    background-color: #f0e9e9;
+    width: 90%;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 27px 35px 30px 35px; }
+    padding: 25px 5px 5px 5px; }
+    .programm__block_color-0 {
+      background-color: #f0e9e9; }
+    .programm__block_color-1 {
+      background-color: #eaf3ed; }
+    .programm__block_color-2 {
+      background-color: #f6eee4; }
+  .programm__type {
+    width: 100%; }
   .programm__name {
     color: #da4d1b;
     font-family: "Fira Sans", sans-serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 500;
     text-align: center;
     padding-bottom: 30px; }
   .programm__weeks {
+    width: 100%;
     padding-top: 20px; }
   .programm__delivery {
-    padding-top: 30px; }
+    padding-top: 30px;
+    background-image: url("../img/square.svg");
+    background-position: 0 bottom;
+    background-size: 8px 2px;
+    background-repeat: repeat-x; }
   .programm__text {
-    width: 587px;
+    width: 100%;
     font-family: "Fira Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
-    text-align: center;
     color: #000000;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 30px; }
 
 .type__items {
-  width: 875px;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
   padding-bottom: 25px;
   background-image: url("../img/square.svg");
   background-position: 0 bottom;
   background-size: 8px 2px;
   background-repeat: repeat-x; }
 .type__item {
-  padding: 0 10px;
+  padding: 0 5px 30px 5px;
   display: flex;
   flex-direction: column;
   align-items: center; }
   .type__item:hover {
-    cursor: pointer;
-    padding: 0 8px; }
+    cursor: pointer; }
     .type__item:hover .type__name {
       font-weight: 700; }
     .type__item:hover .type__kcal {
       width: 100px;
       background-color: #000000;
       color: #ffffff; }
+.type__line {
+  display: none; }
 .type__name {
   font-family: "Fira Sans", sans-serif;
-  font-size: 3.2rem;
+  font-size: 2.5rem;
   font-weight: 300;
   color: #000000; }
+  .type__name_one {
+    padding: 0 2.5px; }
+    .type__name_one:hover {
+      font-weight: 700;
+      padding: 0; }
+  .type__name_two {
+    padding: 0 1px; }
+    .type__name_two:hover {
+      font-weight: 700;
+      padding: 0; }
+  .type__name_three {
+    padding: 0 4.5px; }
+    .type__name_three:hover {
+      font-weight: 700;
+      padding: 0; }
   .type__name_bold {
     font-weight: 700; }
 .type__kcal {
@@ -215,8 +290,9 @@ body {
   color: #000000; }
 
 .week__items {
-  width: 875px;
+  width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   padding-bottom: 25px;
@@ -229,7 +305,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 20px; }
+  padding-bottom: 15px; }
   .week__item:hover {
     cursor: pointer; }
     .week__item:hover .week__numb {
@@ -255,29 +331,26 @@ body {
   font-size: 2rem;
   font-weight: 700;
   color: #000000; }
+.week__prolong {
+  margin: 0 auto;
+  width: 90%; }
+.week__label {
+  padding-left: 10px;
+  color: #da4d1b;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.8rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center; }
 
 .delivery__items {
-  width: 875px;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-bottom: 25px;
-  background-image: url("../img/square.svg");
-  background-position: 0 bottom;
-  background-size: 8px 2px;
-  background-repeat: repeat-x; }
+  justify-content: space-between;
+  align-items: flex-start; }
 .delivery__item {
-  width: 140px;
-  height: 85px;
-  margin: 0 5px; }
-  .delivery__item:hover {
-    cursor: pointer; }
-    .delivery__item:hover .delivery__day {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 0 12px; }
-    .delivery__item:hover .delivery__time {
-      display: inline; }
+  width: 50px;
+  height: 40px; }
 .delivery__day {
   display: flex;
   justify-content: center;
@@ -288,12 +361,38 @@ body {
   font-weight: 300;
   color: #000000;
   padding: 0 12px; }
+  .delivery__day-full {
+    display: none; }
+  .delivery__day-sel {
+    background-color: #000000;
+    color: #ffffff; }
+.delivery__mob-time {
+  width: 100px;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center; }
 .delivery__times {
+  display: none;
   width: 140px;
   height: 45px;
   display: flex;
   justify-content: center;
   align-items: center; }
+.delivery__one-time {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  padding: 0 2px; }
+  .delivery__one-time:hover {
+    font-weight: 700;
+    padding: 0 0.7px;
+    cursor: pointer; }
+  .delivery__one-time_bold {
+    font-weight: 700; }
 .delivery__time {
   display: none;
   font-family: "Fira Sans", sans-serif;
@@ -308,11 +407,12 @@ body {
 
 .elements {
   width: 100%;
-  height: 360px;
+  height: 310px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start; }
   .elements__left {
+    display: none;
     width: 20%;
     max-width: 450px;
     height: 360px;
@@ -322,6 +422,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover; }
   .elements__right {
+    display: none;
     width: 20%;
     max-width: 450px; }
   .elements__style {
@@ -350,9 +451,9 @@ body {
     text-align: center;
     color: #000000;
     padding-top: 25px;
-    padding-bottom: 227px; }
+    padding-bottom: 25px; }
   .elements__link {
-    font-size: 2rem;
+    font-size: 1.4rem;
     font-weight: 700;
     color: #000000; }
     .elements__link:hover {
@@ -372,14 +473,15 @@ body {
   position: relative; }
   .menu__title {
     font-family: "Fira Sans", sans-serif;
-    font-size: 6rem;
+    font-size: 3rem;
     font-weight: 300;
     color: #1d1d1b;
     padding-bottom: 40px; }
   .menu__select {
     margin-bottom: 27px;
     outline: none;
-    border: none; }
+    border: none;
+    text-align: right; }
   .menu__days {
     width: 200px;
     display: flex;
@@ -429,6 +531,7 @@ body {
     font-weight: 400;
     color: #000000; }
   .menu::after {
+    display: none;
     position: absolute;
     content: '';
     width: 186px;
@@ -450,7 +553,7 @@ body {
     color: #1d1d1b;
     padding-bottom: 60px; }
   .values__items {
-    width: 750px;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
@@ -482,6 +585,7 @@ body {
   position: relative;
   padding-bottom: 65px; }
   .feedback::before {
+    display: none;
     position: absolute;
     content: '';
     width: 142px;
@@ -499,12 +603,11 @@ body {
     padding-bottom: 45px;
     text-align: center; }
   .feedback__main {
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  .feedback__left {
-    width: 15%; }
   .feedback__center {
     display: flex;
     justify-content: center;
@@ -542,7 +645,7 @@ body {
   .feedback__author {
     padding-top: 20px; }
   .feedback__right {
-    width: 15%;
+    display: none;
     min-height: 388px;
     overflow: hidden;
     background-image: url("../img/all-elements/fish.png");
@@ -556,11 +659,12 @@ body {
   align-items: center;
   padding-bottom: 55px; }
   .instagram__items {
-    width: 860px;
+    width: 90%;
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
   .instagram__logo {
     width: 100%;
     height: 51px;
@@ -568,6 +672,10 @@ body {
     text-align: center; }
   .instagram__item {
     margin-left: 20px; }
+    .instagram__item-one {
+      margin-left: 0px; }
+    .instagram__item-none {
+      display: none; }
 
 .footer__style {
   width: 100%;
@@ -584,6 +692,7 @@ body {
   padding-top: 30px;
   padding-bottom: 115px; }
 .footer__item {
+  display: none;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
@@ -592,6 +701,7 @@ body {
   .footer__item:hover {
     color: #da4d1b; }
 .footer__line {
+  display: none;
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
