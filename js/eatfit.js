@@ -12,6 +12,7 @@ class eatfit {
 
     randomSlider(number) {
         this.slider.classList.add(`slider-${number}`);
+        this.colorblock.classList.add(`programm__block_color-${number}`);
         console.log(number);
     }
 
