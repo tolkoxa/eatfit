@@ -53,8 +53,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start; }
-.header-element-left {
-  display: none; }
 .header-img {
   width: 100px;
   height: 100px;
@@ -64,8 +62,6 @@ body {
 .header-logo {
   width: 82px;
   height: 82px; }
-.header-element-right {
-  display: none; }
 .header-lang {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -407,20 +403,6 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start; }
-  .elements__left {
-    display: none;
-    width: 20%;
-    max-width: 450px;
-    height: 360px;
-    overflow: hidden;
-    background-image: url("../img/all-elements/berrie.png");
-    background-position: right top;
-    background-repeat: no-repeat;
-    background-size: cover; }
-  .elements__right {
-    display: none;
-    width: 20%;
-    max-width: 450px; }
   .elements__style {
     padding-top: 60px;
     display: flex;
@@ -526,15 +508,6 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     color: #000000; }
-  .menu::after {
-    display: none;
-    position: absolute;
-    content: '';
-    width: 186px;
-    height: 155px;
-    bottom: 0px;
-    right: 0px;
-    background-image: url("../img/all-elements/smth-01.png"); }
 
 .values {
   padding-top: 25px;
@@ -578,17 +551,6 @@ body {
   width: 100%;
   position: relative;
   padding-bottom: 55px; }
-  .feedback::before {
-    display: none;
-    position: absolute;
-    content: '';
-    width: 142px;
-    height: 188px;
-    top: 0px;
-    left: 15%;
-    background-image: url("../img/all-elements/avocado.png");
-    background-size: auto;
-    background-repeat: no-repeat; }
   .feedback__title {
     font-family: "Fira Sans", sans-serif;
     font-size: 3rem;
@@ -656,38 +618,25 @@ body {
     font-weight: 400; }
   .feedback__author {
     padding-top: 20px; }
-  .feedback__right {
-    display: none;
-    min-height: 388px;
-    overflow: hidden;
-    background-image: url("../img/all-elements/fish.png");
-    background-position: left center;
-    background-repeat: no-repeat;
-    background-size: cover; }
 
-.instagram {
-  display: none;
-  flex-direction: column;
+.instagram__items {
+  width: 90%;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: 55px; }
-  .instagram__items {
-    width: 90%;
-    padding-top: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: hidden; }
-  .instagram__logo {
-    width: 100%;
-    height: 51px;
-    padding-bottom: 30px;
-    text-align: center; }
-  .instagram__item {
-    margin-left: 20px; }
-    .instagram__item-one {
-      margin-left: 0px; }
-    .instagram__item-none {
-      display: none; }
+  overflow: hidden; }
+.instagram__logo {
+  width: 100%;
+  height: 51px;
+  padding-bottom: 30px;
+  text-align: center; }
+.instagram__item {
+  margin-left: 20px; }
+  .instagram__item-one {
+    margin-left: 0px; }
+  .instagram__item-none {
+    display: none; }
 
 .footer__style {
   width: 100%;
@@ -996,276 +945,63 @@ body {
       background-repeat: no-repeat;
       background-size: cover; }
     .elements__right {
-      display: none;
+      display: inline;
       width: 20%;
       max-width: 450px; }
-    .elements__style {
-      padding-top: 60px;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-    .elements__btn {
-      width: 260px;
-      height: 55px;
-      background-color: #000000;
-      border-radius: 50px;
-      color: #ffffff;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 3.2rem;
-      font-weight: 400;
-      border: none;
-      outline: none; }
-      .elements__btn:hover {
-        cursor: pointer;
-        background-color: #da4d1b; }
     .elements__text {
-      font-family: "Fira Sans", sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      text-align: center;
-      color: #000000;
-      padding-top: 25px;
-      padding-bottom: 25px; }
-    .elements__link {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: #000000; }
-      .elements__link:hover {
-        text-decoration: none;
-        color: #da4d1b; }
-      .elements__link:active, .elements__link:visited, .elements__link:link {
-        color: #000000; }
-        .elements__link:active:hover, .elements__link:visited:hover, .elements__link:link:hover {
-          color: #da4d1b; }
+      padding-bottom: 227px; }
 
-  .menu {
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: -75px;
-    position: relative; }
-    .menu__title {
-      font-family: "Fira Sans", sans-serif;
-      font-size: 3rem;
-      font-weight: 300;
-      color: #1d1d1b;
-      padding-bottom: 40px; }
-    .menu__select {
-      margin-bottom: 27px;
-      outline: none;
-      border: none;
-      text-align: right; }
-    .menu__days {
-      width: 200px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding-bottom: 30px; }
-    .menu__btn {
-      width: 30px;
-      height: 20px;
-      color: #000000;
-      background-color: transparent;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 2rem;
-      font-weight: 300;
-      border: none;
-      outline: none; }
-      .menu__btn:hover {
-        cursor: pointer;
-        font-weight: 700; }
-      .menu__btn_bold {
-        font-weight: 700; }
-    .menu__items {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
-    .menu__item {
-      padding: 0 26px 50px 26px; }
-    .menu__info {
-      padding: 28px 0 0 29px; }
-    .menu__name {
-      font-family: "Fira Sans", sans-serif;
-      color: #000000;
-      font-size: 2rem;
-      font-weight: 700;
-      line-height: 1.8rem; }
-    .menu__text {
-      font-family: "Fira Sans", sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #da4d1b;
-      line-height: 2rem; }
-    .menu__more {
-      padding-top: 20px;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #000000; }
-    .menu::after {
-      display: none;
-      position: absolute;
-      content: '';
-      width: 186px;
-      height: 155px;
-      bottom: 0px;
-      right: 0px;
-      background-image: url("../img/all-elements/smth-01.png"); }
+  .menu__title {
+    font-size: 6rem; }
+  .menu__more {
+    padding-top: 20px;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #000000; }
+  .menu::after {
+    position: absolute;
+    content: '';
+    width: 186px;
+    height: 155px;
+    bottom: 0px;
+    right: 0px;
+    background-image: url("../img/all-elements/smth-01.png"); }
 
-  .values {
-    padding-top: 25px;
-    padding-bottom: 35px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-    .values__title {
-      font-family: "Fira Sans", sans-serif;
-      font-size: 3rem;
-      font-weight: 300;
-      color: #1d1d1b;
-      padding-bottom: 60px; }
-    .values__items {
-      width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center; }
-    .values__item {
-      width: 240px;
-      padding-bottom: 55px;
-      display: flex;
-      flex-direction: column;
-      align-items: center; }
-    .values__name {
-      padding-top: 30px;
-      padding-bottom: 24px;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 2rem;
-      font-weight: 700;
-      color: #000000; }
-    .values__text {
-      max-width: 225px;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #000000;
-      text-align: center; }
+  .values__title {
+    font-size: 6rem; }
+  .values__items {
+    width: 750px; }
 
-  .feedback {
-    width: 100%;
-    position: relative;
-    padding-bottom: 55px; }
-    .feedback::before {
-      display: none;
-      position: absolute;
-      content: '';
-      width: 142px;
-      height: 188px;
-      top: 0px;
-      left: 15%;
-      background-image: url("../img/all-elements/avocado.png");
-      background-size: auto;
-      background-repeat: no-repeat; }
-    .feedback__title {
-      font-family: "Fira Sans", sans-serif;
-      font-size: 3rem;
-      font-weight: 300;
-      color: #1d1d1b;
-      padding-bottom: 45px;
-      text-align: center; }
-    .feedback__main {
-      width: 90%;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center; }
-    .feedback__center {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .feedback__center-arrow {
-        width: 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-    .feedback__arrow {
-      width: 21px;
-      height: 21px;
-      background-color: #000000;
-      border-radius: 50%;
-      color: #ffffff;
-      font-size: 1.3rem;
-      font-weight: 100;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .feedback__arrow:hover {
-        cursor: pointer;
-        background-color: #da4d1b; }
-    .feedback__phone {
-      width: 200px;
-      height: 400px;
-      padding: 100px 35px;
-      background-image: url("../img/iphone.png");
-      background-position: center center;
-      background-repeat: no-repeat;
-      background-size: contain;
-      overflow: hidden; }
-      .feedback__phone-data {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 1000%;
-        overflow: hidden;
-        position: relative; }
-    .feedback__data-item {
-      width: 140px;
-      position: relative;
-      margin-right: 60px; }
-    .feedback__date {
-      padding-bottom: 20px; }
-    .feedback__text {
-      width: 100%;
-      color: #000000;
-      font-family: "Fira Sans", sans-serif;
-      font-size: 1.3rem;
-      font-weight: 400; }
-    .feedback__author {
-      padding-top: 20px; }
-    .feedback__right {
-      display: none;
-      min-height: 388px;
-      overflow: hidden;
-      background-image: url("../img/all-elements/fish.png");
-      background-position: left center;
-      background-repeat: no-repeat;
-      background-size: cover; }
+  .feedback::before {
+    position: absolute;
+    content: '';
+    width: 142px;
+    height: 188px;
+    top: 0px;
+    left: 15%;
+    background-image: url("../img/all-elements/avocado.png");
+    background-size: auto;
+    background-repeat: no-repeat; }
+  .feedback__title {
+    font-size: 6rem; }
+  .feedback__main {
+    width: 100%; }
+  .feedback__right {
+    min-height: 388px;
+    overflow: hidden;
+    background-image: url("../img/all-elements/fish.png");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: cover; }
 
   .instagram {
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 55px; }
     .instagram__items {
-      width: 90%;
-      padding-top: 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      overflow: hidden; }
-    .instagram__logo {
-      width: 100%;
-      height: 51px;
-      padding-bottom: 30px;
-      text-align: center; }
-    .instagram__item {
-      margin-left: 20px; }
-      .instagram__item-one {
-        margin-left: 0px; }
-      .instagram__item-none {
-        display: none; }
+      width: 860px; }
 
   .footer__style {
     width: 100%;
@@ -1276,14 +1012,15 @@ body {
     align-items: center;
     background-color: #000000; }
   .footer__menu {
-    display: none;
-    width: 100%;
+    display: inline;
+    width: 750px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 30px; }
+    padding-top: 30px;
+    padding-bottom: 115px; }
   .footer__item {
-    display: none;
+    display: inline;
     font-family: "Fira Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
@@ -1292,26 +1029,9 @@ body {
     .footer__item:hover {
       color: #da4d1b; }
   .footer__line {
-    display: none;
+    display: inline;
     font-family: "Fira Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 400;
     color: #ffffff;
-    padding: 0 37px; }
-  .footer__icons {
-    display: flex; }
-  .footer__icon {
-    padding: 0 7px; }
-  .footer__pic {
-    padding-top: 35px;
-    padding-bottom: 35px; }
-  .footer__img {
-    width: 98px;
-    height: auto; }
-  .footer__text {
-    margin: 0 auto;
-    color: #ffffff;
-    font-family: "Fira Sans", sans-serif;
-    font-size: 1.4rem;
-    font-weight: 300;
-    padding-bottom: 15px; } }
+    padding: 0 37px; } }
