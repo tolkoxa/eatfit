@@ -171,6 +171,7 @@ body {
   background-image: url("../img/main/slider/mobile/2.jpg"); }
 
 .programm {
+  width: 100%;
   padding-top: 35px;
   margin: 0 auto;
   display: flex;
@@ -336,13 +337,17 @@ body {
   text-align: center; }
 
 .delivery__items {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto; }
 .delivery__item {
-  width: 50px;
-  height: 40px; }
+  width: 40px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5px; }
 .delivery__day {
   display: flex;
   justify-content: center;
@@ -351,11 +356,12 @@ body {
   font-family: "Fira Sans", sans-serif;
   font-size: 2rem;
   font-weight: 300;
-  color: #000000;
-  padding: 0 12px; }
+  color: #000000; }
   .delivery__day-full {
     display: none; }
   .delivery__day-sel {
+    width: 100%;
+    height: 60px;
     background-color: #000000;
     color: #ffffff; }
 .delivery__mob-time {
@@ -368,7 +374,7 @@ body {
   align-self: center; }
 .delivery__times {
   display: none;
-  width: 140px;
+  width: 40px;
   height: 45px;
   display: flex;
   justify-content: center;
@@ -487,9 +493,9 @@ body {
     flex-wrap: wrap;
     justify-content: center; }
   .menu__item {
-    padding: 0 26px 50px 26px; }
+    padding: 0 2px; }
   .menu__info {
-    padding: 28px 0 0 29px; }
+    padding: 28px 0 30px 29px; }
   .menu__name {
     font-family: "Fira Sans", sans-serif;
     color: #000000;
@@ -619,24 +625,31 @@ body {
   .feedback__author {
     padding-top: 20px; }
 
-.instagram__items {
-  width: 90%;
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
+.instagram {
+  display: none;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden; }
-.instagram__logo {
-  width: 100%;
-  height: 51px;
-  padding-bottom: 30px;
-  text-align: center; }
-.instagram__item {
-  margin-left: 20px; }
-  .instagram__item-one {
-    margin-left: 0px; }
-  .instagram__item-none {
-    display: none; }
+  padding-bottom: 55px; }
+  .instagram__items {
+    width: 90%;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    margin: 0 auto; }
+  .instagram__logo {
+    width: 100%;
+    height: 51px;
+    padding-bottom: 30px;
+    text-align: center; }
+  .instagram__item {
+    margin-left: 20px; }
+    .instagram__item-one {
+      margin-left: 0px; }
+    .instagram__item-none {
+      display: none; }
 
 .footer__style {
   width: 100%;
@@ -699,21 +712,23 @@ body {
     height: 210px;
     background-image: url("../img/header/top-element.png");
     background-repeat: no-repeat;
-    background-position: 110px top; }
+    background-position: 110px top;
+    margin-bottom: 10px; }
   .header-top {
     width: 1000px;
     padding: 15px 0 0 20px; }
   .header__burger {
     display: none; }
+  .header-center {
+    width: 355px;
+    height: 147px; }
   .header-element-left {
-    display: inline;
-    background-image: url("../img/header/header-dots.png");
-    background-repeat: no-repeat;
     width: 147px;
     height: 147px;
+    background-image: url("../img/header/header-dots.png");
+    background-repeat: no-repeat;
     background-position: top left; }
   .header-element-right {
-    display: inline;
     width: 108px;
     height: 147px;
     padding-top: 54px;
@@ -734,7 +749,7 @@ body {
   .nav__style {
     display: flex;
     padding: 26px 0 16px 0;
-    margin: 0 auto;
+    margin: 5px auto;
     justify-content: center;
     position: relative;
     z-index: 1; }
@@ -760,6 +775,7 @@ body {
     flex-direction: column;
     align-items: center; }
     .programm__title {
+      font-size: 6rem;
       padding-bottom: 46px; }
     .programm__block {
       width: 950px;
@@ -917,6 +933,7 @@ body {
     .delivery__one-time_bold {
       font-weight: 700; }
   .delivery__time-sel {
+    display: inline;
     font-family: "Fira Sans", sans-serif;
     font-size: 2rem;
     font-weight: 300;
@@ -947,12 +964,24 @@ body {
     .elements__right {
       display: inline;
       width: 20%;
+      height: 100%;
       max-width: 450px; }
     .elements__text {
-      padding-bottom: 227px; }
+      padding-bottom: 227px;
+      position: relative; }
+      .elements__text::after {
+        position: absolute;
+        content: '';
+        top: 110px;
+        right: -20px;
+        width: 62px;
+        height: 49px;
+        background-image: url("../img/all-elements/leaf.png"); }
 
   .menu__title {
     font-size: 6rem; }
+  .menu__item {
+    padding: 0 26px; }
   .menu__more {
     padding-top: 20px;
     font-family: "Fira Sans", sans-serif;
@@ -1002,10 +1031,17 @@ body {
     padding-bottom: 55px; }
     .instagram__items {
       width: 860px; }
+    .instagram__item {
+      margin-left: 20px; }
+      .instagram__item-one {
+        display: none;
+        margin-left: 0px; }
+      .instagram__item-none {
+        display: inline; }
 
   .footer__style {
     width: 100%;
-    height: 300px;
+    height: 310px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -1018,7 +1054,7 @@ body {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
-    padding-bottom: 115px; }
+    padding-bottom: 75px; }
   .footer__item {
     display: inline;
     font-family: "Fira Sans", sans-serif;
@@ -1034,4 +1070,21 @@ body {
     font-size: 1.4rem;
     font-weight: 400;
     color: #ffffff;
-    padding: 0 37px; } }
+    padding: 0 37px; }
+  .footer__icons {
+    padding-top: 28px;
+    padding-bottom: 63px; }
+  .footer__pic {
+    display: none;
+    padding-top: 35px;
+    padding-bottom: 35px; }
+  .footer__img {
+    width: 98px;
+    height: auto; }
+  .footer__text {
+    margin: 0 auto;
+    color: #ffffff;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 300;
+    padding-bottom: 15px; } }
